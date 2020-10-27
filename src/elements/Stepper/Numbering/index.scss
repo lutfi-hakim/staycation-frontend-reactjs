@@ -1,7 +1,7 @@
 @import "../../../assets/scss/colorVariables";
 
 $stepperMainColor: $gray-200;
-$size: 50px;
+$size: 60px;
 
 ol.stepper {
   display: flex;
@@ -28,7 +28,7 @@ ol.stepper {
       width: $size;
       height: $size;
       border-radius: $size;
-      background-image: url('data:image/svg+xml;utf8,<svg width="34" height="20" viewBox="0 0 34 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 9L8.78196 16.6297C9.47112 17.405 10.6386 17.5247 11.4708 16.9054L31.5 2"stroke="white"stroke-width="4"stroke-linecap="round"/> </svg> ');
+      background-image: url('data:image/svg+xml;utf8,<svg width="30" height="21" viewBox="0 0 30 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.62961 8.52668L7.82252 17.2306C8.46805 18.3126 9.94113 18.5354 10.8778 17.6927L27.1842 3.02177" stroke="white" stroke-width="4" stroke-linecap="round"/></svg>');
       background-position: center;
       background-repeat: no-repeat;
       background-color: $teal;
@@ -38,7 +38,8 @@ ol.stepper {
 
     &:not(:last-child) {
       margin-right: 60px;
-      &::before {
+
+      &:before {
         content: "";
         z-index: -2;
         top: 50%;
@@ -57,12 +58,14 @@ ol.stepper {
         border: 1px solid $stepperMainColor;
         transform: scale(1.2);
       }
+
       background-color: $stepperMainColor;
       color: $gray-500;
 
-      & ~ li {
+      &~li {
         color: $gray-500;
         background: $stepperMainColor;
+
         &:after {
           content: none;
         }

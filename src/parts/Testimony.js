@@ -12,8 +12,16 @@ export default function Testimony({ data }) {
                 <div className="row align-items-center">
                     <div className="col-auto" style={{ marginRight: 70 }}>
                         <div className="testimonial-hero" style={{ margin: `30px 0 0 30px` }}>
-                            <img src={data.imageUrl} alt="Testimonial" className="position-absolute" style={{ zIndex: 1 }} />
-                            <img src={TestimonyAccent} alt="Testimonial frame" className="position-absolute" style={{ margin: `-30px 0 0 -30px` }} />
+                            <img 
+                                src={`${process.env.REACT_APP_HOST}/${data.imageUrl}`} 
+                                alt="Testimonial" 
+                                className="position-absolute" 
+                                style={{ zIndex: 1 }} />
+                            <img 
+                                src={TestimonyAccent} 
+                                alt="Testimonial frame" 
+                                className="position-absolute" 
+                                style={{ margin: `-30px 0 0 -30px` }} />
                         </div>
                     </div>
                     <div className="col">
@@ -30,7 +38,7 @@ export default function Testimony({ data }) {
                         <div>
                             <Button className="btn px-5" style={{ marginTop: 40 }} hasShadow isPrimary type="link" href={`/testimonial/${data._id}`}>
                                 Read Their Story
-                        </Button>
+                            </Button>
                         </div>
                     </div>
                 </div>
